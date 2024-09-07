@@ -1,0 +1,46 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <div
+    class="border-b-2 border-black flex flex-col w-full mx-auto lg:max-w-[80%] py-6 gap-4"
+  >
+    <h2 class="text-4xl self-center font-serif">My Work</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 px-4">
+      <ProjectCard
+        title="Power BI Embeeded"
+        description="A web app with authentication and authorization that allows for user management and embedded Power BI dashboards through the Power BI API."
+        color="bg-[#ff6b6b]"
+        imgUrl="infografia.png"
+        gitUrl="https://cristian-velasquez.notion.site/Elevating-Data-Sharing-A-Secure-Portal-for-Power-BI-Reports-5f5c30961315489984d20a5248c4cf55"
+        techs={["Express", "Prisma", "PostgreSQL", "Angular", "TypeScript"]}
+      />
+      <ProjectCard
+        title="Geolocation Web App"
+        description="A web app that allows pharmacy chains to identify the area they are located in and who they are being compared against in the market."
+        color="bg-[#c4a1ff]"
+        imgUrl="ubicacion.png"
+        gitUrl="https://cristian-velasquez.notion.site/Streamlining-Geolocation-A-Web-App-Case-Study-6e61ac2832194a48add78eb3927b049e"
+        techs={["Laravel", "Express", "TypeScript", "PostgreSQL"]}
+      />
+      <ProjectCard
+        title="Products Control System"
+        description="A web app that allows Key Account Managers to manage the products that need to be built by the production area for the following month. Roles include administrator, sales, and production."
+        color="bg-[#90ee90]"
+        imgUrl="tareas-diarias.png"
+        gitUrl="https://github.com/cristiancavelasquez/dashboard-comercial"
+        techs={["NextJs", "TypeScript", "Prisma", "PostgreSQL","Shadcn", "React"]}
+      />
+      <ProjectCard
+        title="Pokémon Game"
+        description="Welcome to Who's That Pokémon?, a fun and interactive game where players guess the Pokémon based on their silhouette!"
+        color="bg-[#69d2e7]"
+        imgUrl="pokemon-ir.png"
+        gitUrl="https://github.com/cristiancavelasquez/whoIsThatPokemon"
+        techs={["Vue", "Composition API", "tailwindcss", "TypeScript"]}
+      />
+    </div>
+  </div>
+</MainLayout>

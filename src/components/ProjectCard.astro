@@ -1,0 +1,31 @@
+---
+interface ProjectCardProps {
+  color: string;
+  title: string;
+  description: string;
+  imgUrl: string;
+  techs: string[];
+  gitUrl: string;
+}
+const { color, title, description, imgUrl, techs, gitUrl } =
+  Astro.props as ProjectCardProps;
+---
+
+<a
+  href={gitUrl}
+  class={`${color} border border-black rounded-md p-4 flex flex-col gap-3`}
+>
+  <img src={imgUrl} alt="ddd" class="max-w-20" />
+  <h2 class="text-2xl">{title}</h2>
+  <p>{description}</p>
+  <div class="flex flex-col gap-2">
+    <p class="text-sm">Technologies</p>
+    <ul class="flex gap-1 text-sm flex-wrap">
+      {
+        techs.map((tech) => (
+          <li class="bg-white rounded-full border px-4 border-black">{tech}</li>
+        ))
+      }
+    </ul>
+  </div>
+</a>

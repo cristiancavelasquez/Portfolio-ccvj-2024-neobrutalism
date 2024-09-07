@@ -1,0 +1,95 @@
+---
+---
+
+<section>
+  <div class="flex flex-col w-full mx-auto lg:max-w-[80%] px-3 lg:px-0 py-6 lg:gap-6">
+    <h2 class="font-serif text-4xl font-semibold self-center">Projects</h2>
+    <div class="flex flex-col lg:flex-row py-10 gap-16 lg:gap-0">
+      <div class="lg:pl-12 gap-4 lg:w-1/2 flex flex-col justify-center">
+        <p>
+          I have developed full-stack web apps, and I have also contributed as a
+          backend developer or frontend developer to other projects. My main
+          stack is React with Next.js, using Prisma as the ORM and PostgreSQL
+          for the database. However, I have also worked with technologies like
+          Express and Laravel’s PHP Blade templates. I enjoy working primarily
+          with TypeScript, and ensuring an intuitive and seamless UI/UX is a
+          core principle in my work.
+        </p>
+        <a href="/work" class="self-center lg:self-start">
+          <button
+            class="bg-pink-decoration font-serif font-semibold py-2 px-6 rounded-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 ease-in-out transform hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+          >
+            More projects
+          </button>
+        </a>
+      </div>
+      <div class="lg:w-1/2">
+        <div class="flex flex-col gap-4 lg:gap-0 lg:-space-y-12 items-center">
+          <!-- Primera tarjeta -->
+          <a
+            href="https://cristian-velasquez.notion.site/Elevating-Data-Sharing-A-Secure-Portal-for-Power-BI-Reports-5f5c30961315489984d20a5248c4cf55"
+            class="card p-2 flex flex-col gap-1 border border-text-primary shadow-[4px_4px_0px_0px_rgba(40,40,37,1)] w-64 h-40 bg-[#ff9b85] rounded-lg lg:rotate-[15deg]"
+          >
+            <div class="h-4/5 w-full">
+              <img
+                src="pic1.png"
+                class="object-cover h-full w-full rounded-lg border border-text-primary"
+
+                alt="dd"
+              />
+            </div>
+            <h2 class="font-semibold">Power BI Embeeded Dashboards</h2>
+          </a>
+          <!-- 2 tarjeta -->
+          <a
+            href="https://cristian-velasquez.notion.site/Streamlining-Geolocation-A-Web-App-Case-Study-6e61ac2832194a48add78eb3927b049e"
+            class="card p-2 flex flex-col gap-1 border border-text-primary shadow-[4px_4px_0px_0px_rgba(40,40,37,1)] w-64 h-40 bg-[#ffd97d] rounded-lg lg:rotate-[-15deg]"
+          >
+            <div class="h-4/5 w-full">
+              <img
+                src="pic2.png"
+                class="object-cover h-full w-full rounded-lg border border-text-primary"
+                alt="ss"
+              />
+            </div>
+            <h2 class="font-semibold self-end">Geolocation Web App</h2>
+          </a>
+          <!-- 3 tarjeta -->
+          <a
+            href="https://github.com/cristiancavelasquez/dashboard-comercial?tab=readme-ov-file"
+            class="card p-2 flex flex-col gap-1 border border-text-primary shadow-[4px_4px_0px_0px_rgba(40,40,37,1)] w-64 h-40 bg-[#aaf683] rounded-lg lg:rotate-[15deg]"
+          >
+            <div class="h-4/5 w-full">
+              <img
+                src="pic3.png"
+                class="object-cover h-full w-full rounded-lg border border-text-primary"
+                alt=""
+              />
+            </div>
+            <h2 class="font-semibold">Products Control System</h2>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  /* Animación sutil */
+  .card {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-10px) scale(1.05) !important;
+    z-index: 10;
+    /*  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); */
+  }
+  /* Rotaciones personalizadas */
+  .rotate-15 {
+    transform: rotate(15deg);
+  }
+  .rotate--15 {
+    transform: rotate(-15deg);
+  }
+</style>
