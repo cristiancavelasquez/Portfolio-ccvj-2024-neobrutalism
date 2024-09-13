@@ -5,17 +5,38 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout>
   <div
-  class="border-b-2 border-black flex flex-col w-full mx-auto lg:max-w-[80%] py-6 gap-4"
+    class="border-b-2 border-black flex flex-col w-full mx-auto lg:max-w-[80%] py-6 gap-4"
   >
-  <h2 class="text-4xl self-center font-serif">My Work</h2>
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 px-4">
+    <h2 class="text-4xl self-center font-serif">My Work</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 px-4">
+      <ProjectCard
+        title="Open AI Full-stack App"
+        description="Full-stack app that allows users to interact with the OpenAI API, providing a user-friendly interface to generate text, images, and more."
+        color="bg-[#ffafcc]"
+        imgUrl="/ai.png"
+        gitUrl="https://github.com/cristiancavelasquez/AI-tools-Frontend"
+        techs={[
+          "React",
+          "Nest Js",
+          "Open AI API",
+          "Tailwind CSS",
+          "TypeScript",
+        ]}
+      />
       <ProjectCard
         title="Journal App"
         description="Journal app that allows users to record key moments, provides extended descriptions, automatically logs the time, and enables image uploads to accompany each entry."
         color="bg-[#fcbf49]"
         imgUrl="/diario.png"
         gitUrl="https://github.com/cristiancavelasquez/react-journal-material-redux"
-        techs={["React", "Redux", "MaterialUI", "Firebase", "React Router", "Cloudinary"]}
+        techs={[
+          "React",
+          "Redux",
+          "MaterialUI",
+          "Firebase",
+          "React Router",
+          "Cloudinary",
+        ]}
       />
       <ProjectCard
         title="Power BI Embeeded"
@@ -39,7 +60,14 @@ import MainLayout from "../layouts/MainLayout.astro";
         color="bg-[#90ee90]"
         imgUrl="/tareas-diarias.png"
         gitUrl="https://github.com/cristiancavelasquez/dashboard-comercial"
-        techs={["NextJs", "TypeScript", "Prisma", "PostgreSQL","Shadcn", "React"]}
+        techs={[
+          "NextJs",
+          "TypeScript",
+          "Prisma",
+          "PostgreSQL",
+          "Shadcn",
+          "React",
+        ]}
       />
       <ProjectCard
         title="Pokémon Game"
