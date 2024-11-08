@@ -11,22 +11,36 @@ const { color, title, description, imgUrl, techs, gitUrl } =
   Astro.props as ProjectCardProps;
 ---
 
-<a
-  href={gitUrl}
-  class={`${color} border border-black rounded-md p-4 flex flex-col gap-3`}
+<section
+  class={`bg-white  flex flex-col  border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]`}
 >
-<!-- ===  -->
-  <img src={imgUrl} alt="ddd" class="max-w-20" />
-  <h2 class="text-2xl">{title}</h2>
-  <p>{description}</p>
-  <div class="flex flex-col gap-2">
-    <p class="text-sm">Technologies</p>
-    <ul class="flex gap-1 text-sm flex-wrap">
-      {
-        techs.map((tech) => (
-          <li class="bg-white rounded-full border px-4 border-black">{tech}</li>
-        ))
-      }
-    </ul>
+  <!-- ===  -->
+  <img src={imgUrl} alt="ddd" class="" /> <!-- TODO: on hover, mostrar el real -->
+  <div class="p-3 flex flex-col gap-2">
+    <h2 class="text-xl font-bold">{title}</h2>
+    <p>{description}</p>
+    <div class="flex flex-col gap-2">
+      <ul class="flex gap-1 text-sm flex-wrap">
+        {
+          techs.map((tech) => (
+            <li class="bg-white text-xs rounded-full border px-2 py-1 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+              {tech}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="self-end flex gap-3 mt-2">
+      <a
+        href="#"
+        class="bg-violet-300 border px-5 py-1 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 ease-in-out transform hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+        >Github</a
+      >
+      <a
+        href="#"
+        class="bg-yellow-decoration border px-4 py-1 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 ease-in-out transform hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+        >Case Study</a
+      >
+    </div>
   </div>
-</a>
+</section>
