@@ -1,13 +1,13 @@
 ---
 interface ProjectCardProps {
-  color: string;
   title: string;
   description: string;
   imgUrl: string;
   techs: string[];
-  gitUrl: string;
+  url: string;
+  showGit: Boolean;
 }
-const { color, title, description, imgUrl, techs, gitUrl } =
+const { title, description, imgUrl, techs, url, showGit } =
   Astro.props as ProjectCardProps;
 ---
 
@@ -15,10 +15,11 @@ const { color, title, description, imgUrl, techs, gitUrl } =
   class={`bg-white  flex flex-col  border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]`}
 >
   <!-- ===  -->
-  <img src={imgUrl} alt="ddd" class="" /> <!-- TODO: on hover, mostrar el real -->
+  <img src={imgUrl} alt="ddd" class="" />
+  <!-- TODO: on hover, mostrar el real -->
   <div class="p-3 flex flex-col gap-2">
     <h2 class="text-xl font-bold">{title}</h2>
-    <p>{description}</p>
+    <p class="text-pretty">{description}</p>
     <div class="flex flex-col gap-2">
       <ul class="flex gap-1 text-sm flex-wrap">
         {
@@ -31,16 +32,25 @@ const { color, title, description, imgUrl, techs, gitUrl } =
       </ul>
     </div>
     <div class="self-end flex gap-3 mt-2">
-      <a
-        href="#"
-        class="bg-violet-300 border px-5 py-1 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 ease-in-out transform hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-        >Github</a
-      >
-      <a
-        href="#"
-        class="bg-yellow-decoration border px-4 py-1 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 ease-in-out transform hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-        >Case Study</a
-      >
+      {
+        showGit ? (
+          <a
+            href={url}
+            target="_blank"
+            class="bg-violet-300 border px-5 py-1 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 ease-in-out transform hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+          >
+            Github
+          </a>
+        ) : (
+          <a
+            href={url}
+            target="_blank"
+            class="bg-yellow-decoration border px-4 py-1 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 ease-in-out transform hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+          >
+            Case Study
+          </a>
+        )
+      }
     </div>
   </div>
 </section>

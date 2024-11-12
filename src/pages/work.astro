@@ -5,77 +5,39 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout>
   <div
-    class="border-b-2 border-black flex flex-col w-full mx-auto lg:max-w-3xl py-1 gap-4"
+    class="border-b-2 border-black flex flex-col w-full mx-auto lg:max-w-3xl py-4 gap-4"
   >
     <h2 class="text-4xl self-center font-serif">My Work</h2>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 px-4">
-     <!--  <ProjectCard
-        title="Open AI Full-stack App"
-        description="Full-stack app that allows users to interact with the OpenAI API, providing a user-friendly interface to generate text, images, and more."
-        color="bg-[#ffafcc]"
-        imgUrl="/ai.png"
-        gitUrl="https://github.com/cristiancavelasquez/AI-tools-Frontend"
-        techs={[
-          "React",
-          "Nest Js",
-          "Open AI API",
-          "Tailwind CSS",
-          "TypeScript",
-        ]}
-      />
-      <ProjectCard
-        title="Journal App"
-        description="Journal app that allows users to record key moments, provides extended descriptions, automatically logs the time, and enables image uploads to accompany each entry."
-        color="bg-[#fcbf49]"
-        imgUrl="/diario.png"
-        gitUrl="https://github.com/cristiancavelasquez/react-journal-material-redux"
-        techs={[
-          "React",
-          "Redux",
-          "MaterialUI",
-          "Firebase",
-          "React Router",
-          "Cloudinary",
-        ]}
-      /> -->
       <ProjectCard
         title="Dashboard Sharing Platform"
         description="A web app with authentication and authorization that allows for user management and embedded Power BI dashboards through the Power BI API."
-        color="bg-[#ff6b6b]"
         imgUrl="/p1.png"
-        gitUrl="https://cristian-velasquez.notion.site/Elevating-Data-Sharing-A-Secure-Portal-for-Power-BI-Reports-5f5c30961315489984d20a5248c4cf55"
+        url="https://cristian-velasquez.notion.site/Elevating-Data-Sharing-A-Secure-Portal-for-Power-BI-Reports-5f5c30961315489984d20a5248c4cf55"
         techs={["Express", "Prisma", "PostgreSQL", "Angular", "TypeScript"]}
       />
       <ProjectCard
         title="Geolocation Web App"
         description="A web app that allows pharmacy chains to identify the area they are located in and who they are being compared against in the market."
-        color="bg-[#c4a1ff]"
         imgUrl="/p2.png"
-        gitUrl="https://cristian-velasquez.notion.site/Streamlining-Geolocation-A-Web-App-Case-Study-6e61ac2832194a48add78eb3927b049e"
-        techs={["Laravel", "Express", "TypeScript", "PostgreSQL"]}
+        url="https://cristian-velasquez.notion.site/Streamlining-Geolocation-A-Web-App-Case-Study-6e61ac2832194a48add78eb3927b049e"
+        techs={["Laravel","PHP", "PostgreSQL"]}
       />
       <ProjectCard
         title="Products Control System"
         description="A web app that allows Key Account Managers to manage the products that need to be built by the production area for the following month. Roles include administrator, sales, and production."
-        color="bg-[#90ee90]"
         imgUrl="/p3.png"
-        gitUrl="https://github.com/cristiancavelasquez/dashboard-comercial"
-        techs={[
-          "NextJs",
-          "TypeScript",
-          "Prisma",
-          "PostgreSQL",
-          "Shadcn",
-          "React",
-        ]}
+        url="https://github.com/cristiancavelasquez/dashboard-comercial"
+        techs={["NextJs", "React", "TypeScript", "Prisma", "PostgreSQL"]}
+        showGit="true"
       />
       <ProjectCard
-        title="Pokémon Game"
-        description="Welcome to Who's That Pokémon?, a fun and interactive game where players guess the Pokémon based on their silhouette!"
-        color="bg-[#69d2e7]"
-        imgUrl="/pokemon-ir.png"
-        gitUrl="https://github.com/cristiancavelasquez/whoIsThatPokemon"
-        techs={["Vue", "Composition API", "tailwindcss", "TypeScript"]}
+        title="Geolocation Zone Mapper"
+        description="A Python project that automates the identification of geographical areas (UTCs) from coordinates, optimizing processes and improving efficiency."
+        imgUrl="/p4.png"
+        url="https://github.com/cristiancavelasquez/Maps_Automation"
+        techs={["Python", "Selenium"]}
+        showGit="true"
       />
     </div>
   </div>
